@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduGenie</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">SMART LEARNING PLATFORM</p>
+          <h1>EduGenie</h1>
+          <p class="hero-description">
+            Ask questions, get explanations, generate quizzes, summarize study material,
+            and receive a learning path tailored to your level.
+          </p>
+        </div>
+        <div class="badge">Gemini AI</div>
+      </header>
+
+      <section class="card">
+        <h2>Ask a question</h2>
+        <label for="qa-question">Question</label>
+        <textarea id="qa-question" placeholder="Type your question here..."></textarea>
+        <button id="qa-btn">Get answer</button>
+        <div id="qa-output" class="output"></div>
+      </section>
+
+      <section class="card">
+        <h2>Explain a topic</h2>
+        <label for="explain-topic">Topic</label>
+        <input id="explain-topic" type="text" placeholder="Example: Photosynthesis" />
+        <div class="field">
+          <label for="explain-level">Level</label>
+          <select id="explain-level">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+        <button id="explain-btn">Explain</button>
+        <div id="explain-output" class="output"></div>
+      </section>
+
+      <section class="card">
+        <h2>Summarize text</h2>
+        <label for="summary-text">Text</label>
+        <textarea id="summary-text" placeholder="Paste content to summarize..."></textarea>
+        <div class="field">
+          <label for="summary-bullets">Max bullets</label>
+          <input id="summary-bullets" type="number" min="1" max="15" value="5" />
+        </div>
+        <button id="summary-btn">Summarize</button>
+        <div id="summary-output" class="output"></div>
+      </section>
+
+      <section class="card">
+        <h2>Generate quiz</h2>
+        <label for="quiz-content">Study content</label>
+        <textarea id="quiz-content" placeholder="Paste lesson material..."></textarea>
+        <div class="field">
+          <label for="quiz-count">Question count</label>
+          <input id="quiz-count" type="number" min="1" max="10" value="5" />
+        </div>
+        <button id="quiz-btn">Generate quiz</button>
+        <div id="quiz-output" class="output"></div>
+      </section>
+
+      <section class="card">
+        <h2>Recommended learning path</h2>
+        <label for="learn-topic">Topic</label>
+        <input id="learn-topic" type="text" placeholder="Example: Python" />
+        <div class="field">
+          <label for="learn-level">Level</label>
+          <select id="learn-level">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="learn-weeks">Weeks</label>
+          <input id="learn-weeks" type="number" min="1" max="24" value="4" />
+        </div>
+        <button id="learn-btn">Generate path</button>
+        <div id="learn-output" class="output"></div>
+      </section>
+    </div>
+
+    <script src="/static/css/js/app.js"></script>
+  </body>
+</html>
